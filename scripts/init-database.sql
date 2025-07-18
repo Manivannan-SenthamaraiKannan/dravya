@@ -1,0 +1,44 @@
+-- MongoDB doesn't use SQL, but here's the equivalent structure for reference
+-- This would be handled by the API routes and MongoDB collections
+
+-- Collections that will be created:
+-- 1. users
+-- 2. accounts  
+-- 3. transactions
+
+-- Users collection structure:
+-- {
+--   _id: ObjectId,
+--   firstName: String,
+--   lastName: String,
+--   email: String (unique),
+--   password: String (hashed),
+--   createdAt: Date,
+--   updatedAt: Date
+-- }
+
+-- Accounts collection structure:
+-- {
+--   _id: ObjectId,
+--   userId: String,
+--   name: String,
+--   type: String (checking, savings, investment, credit),
+--   balance: Number,
+--   currency: String,
+--   createdAt: Date,
+--   updatedAt: Date
+-- }
+
+-- Transactions collection structure:
+-- {
+--   _id: ObjectId,
+--   userId: String,
+--   accountId: String,
+--   type: String (income, expense, transfer),
+--   amount: Number,
+--   description: String,
+--   category: String,
+--   date: Date,
+--   status: String (pending, completed, failed),
+--   createdAt: Date
+-- }
